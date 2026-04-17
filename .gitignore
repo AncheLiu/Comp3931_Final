@@ -1,0 +1,58 @@
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local virtual environments should not be committed.
+venv/
+.venv/
+env/
+rl_project_env/
+
+# Editor and OS files.
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Temporary experiment smoke-test outputs.
+smoke_results/
+
+# Local backup/export folders.
+backups/
+example/
+
+# Legacy or non-core artefacts that are not needed for reproduction.
+artifacts/
+legacy_scripts/
+
+# Heavy generated model checkpoints. Recreate these by rerunning experiments.
+*.pth
+*.pt
+*.ckpt
+
+# Logs and temporary files.
+*.log
+*.tmp
+*.bak
+
+# LaTeX build artefacts.
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.lof
+*.lot
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+
+# Python packaging/build outputs.
+build/
+dist/
+*.egg-info/
