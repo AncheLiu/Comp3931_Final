@@ -1,0 +1,53 @@
+environment,algorithm,threshold,first_episode
+acrobotv1,ddqn,-100.0,not reached
+acrobotv1,dqn,-100.0,not reached
+acrobotv1,dueling_dqn,-100.0,not reached
+acrobotv1,ppo,-100.0,1540
+cartpolev1,ddqn,475.0,not reached
+cartpolev1,dqn,475.0,not reached
+cartpolev1,dueling_dqn,475.0,not reached
+cartpolev1,ppo,475.0,340
+lunarlanderv3,ddqn,100.0,not reached
+lunarlanderv3,ddqn,200.0,not reached
+lunarlanderv3,ddqn_per,100.0,550
+lunarlanderv3,ddqn_per,200.0,950
+lunarlanderv3,dqn,100.0,not reached
+lunarlanderv3,dqn,200.0,not reached
+lunarlanderv3,dqn_per,100.0,550
+lunarlanderv3,dqn_per,200.0,750
+lunarlanderv3,dueling_dqn,100.0,not reached
+lunarlanderv3,dueling_dqn,200.0,not reached
+lunarlanderv3,dueling_dqn_per,100.0,550
+lunarlanderv3,dueling_dqn_per,200.0,1000
+lunarlanderv3,dueling_dqn_per_alpha04,100.0,550
+lunarlanderv3,dueling_dqn_per_alpha04,200.0,not reached
+lunarlanderv3,dueling_dqn_per_alpha08,100.0,850
+lunarlanderv3,dueling_dqn_per_alpha08,200.0,not reached
+lunarlanderv3,ppo,100.0,not reached
+lunarlanderv3,ppo,200.0,not reached
+lunarlanderv3,ppo_improved,100.0,2500
+lunarlanderv3,ppo_improved,200.0,not reached
+mountaincarv0,ddqn,0.0,not reached
+mountaincarv0,ddqn,50.0,not reached
+mountaincarv0,ddqn_per,0.0,350
+mountaincarv0,ddqn_per,50.0,500
+mountaincarv0,ddqn_per_unshaped,0.0,not reached
+mountaincarv0,ddqn_per_unshaped,50.0,not reached
+mountaincarv0,ddqn_unshaped,0.0,not reached
+mountaincarv0,ddqn_unshaped,50.0,not reached
+mountaincarv0,dqn,0.0,not reached
+mountaincarv0,dqn,50.0,not reached
+mountaincarv0,dqn_per,0.0,450
+mountaincarv0,dqn_per,50.0,500
+mountaincarv0,dqn_per_unshaped,0.0,not reached
+mountaincarv0,dqn_per_unshaped,50.0,not reached
+mountaincarv0,dqn_unshaped,0.0,not reached
+mountaincarv0,dqn_unshaped,50.0,not reached
+mountaincarv0,dueling_dqn,0.0,not reached
+mountaincarv0,dueling_dqn,50.0,not reached
+mountaincarv0,dueling_dqn_per,0.0,500
+mountaincarv0,dueling_dqn_per,50.0,not reached
+mountaincarv0,ppo,0.0,not reached
+mountaincarv0,ppo,50.0,not reached
+mountaincarv0,ppo_improved,0.0,not reached
+mountaincarv0,ppo_improved,50.0,not reached

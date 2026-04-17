@@ -1,0 +1,5 @@
+algorithm_pair,shaped_mean_eval,unshaped_mean_eval,shaping_gain
+dqn,-28.7648,-200.0,171.2352
+ddqn,-96.9538,-200.0,103.0462
+dqn_per,-11.3602,-200.0,188.6398
+ddqn_per,62.1204,-182.5556,244.676

@@ -1,0 +1,4 @@
+environment,algorithm,per_alpha,mean_eval,std_eval
+lunarlanderv3,dueling_dqn_per_alpha04,0.4,157.0634,40.3719
+lunarlanderv3,dueling_dqn_per,0.6,224.2789,22.4283
+lunarlanderv3,dueling_dqn_per_alpha08,0.8,141.9345,93.2608

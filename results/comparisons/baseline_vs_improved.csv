@@ -1,0 +1,3 @@
+environment,best_baseline,baseline_mean_eval,baseline_std_eval,best_improved,improved_mean_eval,improved_std_eval,absolute_gain,relative_gain
+lunarlanderv3,dqn,13.4802,36.088,dueling_dqn_per,224.2789,22.4283,210.7987,15.6377
+mountaincarv0,dqn,-28.7648,93.7558,ddqn_per,62.1204,35.3157,90.8852,3.1596
