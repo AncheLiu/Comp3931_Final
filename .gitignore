@@ -19,6 +19,7 @@ Thumbs.db
 
 # Temporary experiment smoke-test outputs.
 smoke_results/
+tmp/
 
 # Local backup/export folders.
 backups/

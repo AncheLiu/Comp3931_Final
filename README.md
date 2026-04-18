@@ -8,8 +8,8 @@ This project studies several deep reinforcement learning algorithms on classic G
 The codebase is organized for empirical comparison rather than only single-run demos.
 代码结构面向实证比较，而不仅仅是单次演示运行。
 
-It supports multiple random seeds, periodic evaluation, CSV logging, model checkpoints, and learning-curve plots.
-它支持多随机种子实验、周期性评估、CSV 日志记录、模型检查点保存以及学习曲线绘制。
+It supports multiple random seeds, periodic evaluation, CSV logging, comparison figures, and learning-curve plots.
+它支持多随机种子实验、周期性评估、CSV 日志记录、对比图生成以及学习曲线绘制。
 
 ## Scope
 
@@ -42,8 +42,6 @@ The core files are organized as follows.
 rl/
 |- docs/
 |- experiments/
-|- artifacts/
-|- legacy_scripts/
 |- results/
 |- experiment_runner.py
 |- run_all_experiments.py
@@ -59,14 +57,8 @@ rl/
 `experiments/` contains the official training entry scripts for each environment and algorithm.
 `experiments/` 包含每个环境和算法对应的正式训练入口脚本。
 
-`artifacts/legacy_runs/` contains earlier model checkpoints and earlier learning-curve images.
-`artifacts/legacy_runs/` 包含早期模型检查点和早期学习曲线图片。
-
-`legacy_scripts/` contains older scripts kept for reference only.
-`legacy_scripts/` 包含仅供参考的早期脚本。
-
-`results/` contains CSV metrics, summaries, model checkpoints, and comparison figures from formal runs.
-`results/` 包含正式实验产生的 CSV 指标、汇总结果、模型检查点和对比图。
+`results/` contains CSV metrics, summaries, comparison figures, final evaluation records, and demonstration GIFs from formal runs.
+`results/` 包含正式实验产生的 CSV 指标、汇总结果、对比图、最终评估记录和演示 GIF。
 
 `experiment_runner.py` contains the shared training, evaluation, logging, and plotting logic.
 `experiment_runner.py` 包含共享的训练、评估、日志记录和绘图逻辑。
@@ -159,8 +151,11 @@ G:\uni_course\comp3931\rl_project_env\Scripts\python.exe run_all_experiments.py 
 Each experiment writes outputs into the selected results directory.
 每个实验都会把输出写入指定的结果目录。
 
-Typical files include metrics CSV, summary CSV, training curves, evaluation curves, and per-seed model checkpoints.
-典型输出包括指标 CSV、汇总 CSV、训练曲线、评估曲线以及每个随机种子的模型检查点。
+Typical repository outputs include metrics CSV files, summary CSV files, training curves, evaluation curves, comparison plots, and demonstration GIFs.
+仓库中的典型输出包括指标 CSV、汇总 CSV、训练曲线、评估曲线、对比图以及演示 GIF。
+
+Training scripts can save per-seed model checkpoints locally, but checkpoint files are excluded from the public repository to keep it lightweight and reproducible from source.
+训练脚本可以在本地保存每个随机种子的模型检查点，但公开仓库中排除了检查点文件，以保持仓库轻量，并确保结果可以通过源码复现。
 
 `metrics.csv` records environment, algorithm, seed, episode, training reward, evaluation reward, and epsilon when applicable.
 `metrics.csv` 会记录环境、算法、随机种子、轮次、训练奖励、评估奖励，以及在适用时记录 epsilon。
@@ -240,8 +235,8 @@ class RewardShapingWrapper(gym.RewardWrapper):
         return self.env.reset(**kwargs)
 ```
 
-All MountainCar results in this repository should be reported as shaped-reward results.
-本仓库中的所有 MountainCar 结果都应当标注为带奖励塑形的结果。
+MountainCar results should be reported with their reward setting because this repository includes both shaped and unshaped ablation experiments.
+报告 MountainCar 结果时应注明奖励设置，因为本仓库同时包含带奖励塑形和不带奖励塑形的消融实验。
 
 ## Current Limitations
 
@@ -266,5 +261,5 @@ Run at least 3 to 5 seeds for each algorithm-environment pair.
 Compare final evaluation reward instead of only training reward.
 比较时应优先使用最终评估奖励，而不只是训练奖励。
 
-Add a MountainCar ablation study with and without reward shaping if time allows.
-如果时间允许，建议补做一个带奖励塑形与不带奖励塑形的 MountainCar 消融实验。
+Use the MountainCar shaped-versus-unshaped ablation results to discuss how reward design changes learning behaviour.
+使用 MountainCar 带塑形与不带塑形的消融结果，讨论奖励设计如何改变学习行为。

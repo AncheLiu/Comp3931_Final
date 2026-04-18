@@ -13,8 +13,8 @@ The root directory contains the shared code and main runner scripts.
 `README.md` gives the overall project overview, run commands, current results, and limitations.
 `README.md` 提供项目总体介绍、运行命令、当前结果和局限性说明。
 
-`experiment_runner.py` contains the shared implementation for DQN, DDQN, Dueling DQN, PPO, evaluation, CSV logging, model saving, and plotting.
-`experiment_runner.py` 包含 DQN、DDQN、Dueling DQN、PPO、评估、CSV 记录、模型保存和绘图的共享实现。
+`experiment_runner.py` contains the shared implementation for DQN, DDQN, Dueling DQN, PPO, evaluation, CSV logging, optional local model saving, and plotting.
+`experiment_runner.py` 包含 DQN、DDQN、Dueling DQN、PPO、评估、CSV 记录、可选本地模型保存和绘图的共享实现。
 
 `run_all_experiments.py` runs all official experiment entry scripts in `experiments/`.
 `run_all_experiments.py` 会运行 `experiments/` 中所有正式实验入口脚本。
@@ -91,32 +91,14 @@ This folder contains formal experiment outputs.
 `*_evaluation_curve.png` files show evaluation reward curves.
 `*_evaluation_curve.png` 文件展示评估奖励曲线。
 
-`*_seed*.pth` files are saved model weights for each random seed.
-`*_seed*.pth` 文件是每个随机种子的模型权重。
+Model checkpoint files can be generated locally by the training scripts, but they are excluded from the public repository because they are large and reproducible from the committed code.
+模型检查点文件可以由训练脚本在本地生成，但公开仓库中排除了这些文件，因为它们体积较大，并且可以通过已提交代码复现。
 
 `results/comparisons/` contains merged comparison plots and the generated comparison report.
 `results/comparisons/` 包含合并对比图和自动生成的对比报告。
 
-## `artifacts/legacy_runs/`
-## `artifacts/legacy_runs/` 文件夹
-
-This folder stores older model files and older learning-curve images from earlier runs.
-该文件夹保存早期实验产生的模型文件和学习曲线图片。
-
-These files are useful for reference but are not the main formal results.
-这些文件可作为参考，但不是主要正式结果。
-
-## `legacy_scripts/`
-## `legacy_scripts/` 文件夹
-
-This folder stores older standalone training scripts.
-该文件夹保存早期独立训练脚本。
-
-These scripts are kept for reference and development history.
-这些脚本用于参考和保留开发历史。
-
-The official runnable experiment entry points are now in `experiments/`.
-当前正式可运行的实验入口位于 `experiments/`。
+Development-only folders such as legacy scripts, temporary extraction files, old artefacts, and model checkpoints are intentionally excluded from the public repository.
+仅用于开发的文件夹，例如旧脚本、临时抽取文件、旧 artefacts 和模型检查点，已被有意排除在公开仓库之外。
 
 ## Recommended Commands
 ## 推荐命令
